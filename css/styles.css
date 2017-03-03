@@ -1,1 +1,100 @@
+body {
+	background: #492302 url(../img/bkg.jpg) repeat-x fixed;
+	font-style: normal;
+  height: 100%;
+}
 
+html{
+  height: 100%;
+}
+
+#title h1 {
+	color: #f5be56;
+	font: bold 36px/38px Georgia, "Times New Roman", Times, serif;
+  position:absolute;
+	margin-left: 42px;
+	margin-top: 35px;
+	text-shadow: #5d260d 0 1px 2px;
+}
+
+#Online {
+	color: #e5d4cf;
+	font: bold 18px/20px Georgia, "Times New Roman", Times, serif;
+	text-shadow: #5d260d 0 1px 2px;
+}
+
+#directions{
+	color: black;
+	font: bold 18px/20px Georgia, "Times New Roman", Times, serif;
+}
+
+
+
+ #navBackground {
+	width: 874px;
+	margin-right: auto;
+	margin-left: auto;
+  min-height: 200px;
+	background: url(../img/title_bkg.png) no-repeat center top;
+  background-size:100%;
+
+}
+
+#contentTop {
+	background: url(../img/contentTop.png) no-repeat;
+	width: auto;
+  margin-right: auto;
+	margin-left: auto;
+  min-height: 50px;
+
+}
+#contentMiddle {
+	background: url(../img/contentMiddle.jpg) repeat-y;
+  width: auto;
+  margin-right: auto;
+	margin-left: auto;
+  min-height: 300px;
+  padding:10px;
+
+}
+#contentBottom {
+	background: url(../img/contentBottom.png) no-repeat;
+  width: auto;
+  margin-right: auto;
+	margin-left: auto;
+  min-height: 100px;
+
+}
+
+#showPizzas {
+  color:white;
+}
+
+#pizzaSize {
+float:left;
+width:20%;
+margin:10px;
+}
+
+.pizzaSize {
+  font-size: 20px;
+}
+
+#pizzaCrust {
+float:left;
+width:20%;
+margin:10px;
+
+}
+
+#pizzaSauce {
+  float:left;
+  width:20%;
+  margin:10px;
+}
+
+#pizzaCheese {
+  float:left;
+  width:20%;
+  margin:10px;
+}
