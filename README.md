@@ -13,7 +13,9 @@
 | Pizza.howMuch prototype returns regular pizza cost | regular  pizza | 8 |
 | Pizza.howMuch prototype returns regular,large,xlarge pizza cost | regular,large,xlarge | 8,11,14 |
 | Pizza.howMuch prototype returns regular,thin, deepdish pizza cost | regular,thin, deepdish | 8,9,10 |
-| Pizza.howMuch prototype returns regular, oil, pesto sauce pizza cost | regular,thin, deepdish | 8,9,10 |
+| Pizza.howMuch prototype returns regular, oil, pesto sauce pizza cost | regular,oil, pesto | 8,9,10 |
+| Pizza.howMuch prototype returns regular, extra, blend  pizza cost | regular,extra, blend | 8,9,10 |
+| Pizza.howMuch prototype returns regular pepperoni  pizza cost | pepperoni | 9|
 
 
 
