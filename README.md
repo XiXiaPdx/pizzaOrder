@@ -13,6 +13,7 @@
 | Pizza.howMuch prototype returns regular pizza cost | regular  pizza | 8 |
 | Pizza.howMuch prototype returns regular,large,xlarge pizza cost | regular,large,xlarge | 8,11,14 |
 | Pizza.howMuch prototype returns regular,thin, deepdish pizza cost | regular,thin, deepdish | 8,9,10 |
+| Pizza.howMuch prototype returns regular, oil, pesto sauce pizza cost | regular,thin, deepdish | 8,9,10 |
 
 
 

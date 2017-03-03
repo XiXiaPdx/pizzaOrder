@@ -27,14 +27,20 @@ Pizza.prototype.howMuch = function(){
   //cost adjustment on Crust of pizza
   var pizzaCost = (this.crust==="thin") ? (this.cost=(1+pizzaCost)):(this.cost=pizzaCost);
   var pizzaCost = (this.crust==="deepdish") ? (this.cost=(2+pizzaCost)):(this.cost=pizzaCost);
+  // //cost adjustment on sauce
+  var pizzaCost = (this.sauce==="oil") ? (this.cost=(1+pizzaCost)):(this.cost=pizzaCost);
+  var pizzaCost = (this.sauce==="pesto") ? (this.cost=(2+pizzaCost)):(this.cost=pizzaCost);
+
+
   return pizzaCost;
+
 }
 
 Order.prototype.place = function(){
   return Order;
 }
 
-var pizza1=new Pizza ("Xlarge","thin");
+var pizza1=new Pizza ("Xlarge","thin","oil");
 
 var order1=new Order ();
 
