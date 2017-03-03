@@ -22,14 +22,17 @@ Pizza.prototype.make = function(){
 Pizza.prototype.howMuch = function(){
   var pizzaCost=8;
   //cost adjustment on Size of pizza
-  var pizzaCost = (this.sizeOf==="large") ? (this.cost=(3+pizzaCost)):(this.cost=pizzaCost);
-  var pizzaCost = (this.sizeOf==="Xlarge") ? (this.cost=(6+pizzaCost)):(this.cost=pizzaCost);
+  var pizzaCost = (this.sizeOf==="large") ? (this.cost=(4+pizzaCost)):(this.cost=pizzaCost);
+  var pizzaCost = (this.sizeOf==="Xlarge") ? (this.cost=(7+pizzaCost)):(this.cost=pizzaCost);
   //cost adjustment on Crust of pizza
   var pizzaCost = (this.crust==="thin") ? (this.cost=(1+pizzaCost)):(this.cost=pizzaCost);
   var pizzaCost = (this.crust==="deepdish") ? (this.cost=(2+pizzaCost)):(this.cost=pizzaCost);
   // //cost adjustment on sauce
   var pizzaCost = (this.sauce==="oil") ? (this.cost=(1+pizzaCost)):(this.cost=pizzaCost);
   var pizzaCost = (this.sauce==="pesto") ? (this.cost=(2+pizzaCost)):(this.cost=pizzaCost);
+  // //cost adjustment on cheese
+  var pizzaCost = (this.cheese==="extra") ? (this.cost=(1+pizzaCost)):(this.cost=pizzaCost);
+  var pizzaCost = (this.cheese==="blend") ? (this.cost=(2+pizzaCost)):(this.cost=pizzaCost);
 
 
   return pizzaCost;
