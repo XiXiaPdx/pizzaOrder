@@ -16,6 +16,7 @@
 | Pizza.howMuch prototype returns regular, oil, pesto sauce pizza cost | regular,oil, pesto | 8,9,10 |
 | Pizza.howMuch prototype returns regular, extra, blend  pizza cost | regular,extra, blend | 8,9,10 |
 | Pizza.howMuch prototype returns regular pepperoni  pizza cost | pepperoni | 9|
+| Pizza.howMuch prototype returns regular mushroom  pizza cost | pepperoni | 9|
 
 
 

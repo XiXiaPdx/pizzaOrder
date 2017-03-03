@@ -1,11 +1,12 @@
 //business logic
 // objects - pizza, order
-function Pizza(sizeOf,crust,sauce,cheese,toppings,cost){
+function Pizza(sizeOf,crust,sauce,cheese,veggieToppings,meatToppings,cost){
   this.sizeOf=sizeOf;
   this.crust=crust;
   this.sauce=sauce;
   this.cheese=cheese,
-  this.toppings=toppings;
+  this.veggieToppings=veggieToppings;
+  this.meatToppings=meatToppings;
   this.cost=cost;
 }
 
@@ -33,21 +34,22 @@ Pizza.prototype.howMuch = function(){
   //cost adjustment on cheese
    pizzaCost = (this.cheese==="extra") ? (this.cost=(1+pizzaCost)):(this.cost=pizzaCost);
    pizzaCost = (this.cheese==="blend") ? (this.cost=(2+pizzaCost)):(this.cost=pizzaCost);
-  //cost adjustment on toppings
-  this.toppings.forEach(function(topping){
-     (/pepperoni|mushrooms/.test(topping)) ? (pizzaCost=(this.cost=(1+pizzaCost))):(this.cost=pizzaCost);
+  //cost adjustment on veggie toppings
+  this.veggieToppings.forEach(function(topping){
+     (/arugula|garlic|basil|olives|pepperoncini|pineapple|mushrooms|/.test(topping)) ? (pizzaCost=(this.cost=(1+pizzaCost))):(this.cost=pizzaCost);
   });
-
-
+  //cost adjustment on meat toppings
+  this.meatToppings.forEach(function(topping){
+     (/pepperoni|bacon|sausage|salami|capicollo|anchovies/.test(topping)) ? (pizzaCost=(this.cost=(2+pizzaCost))):(this.cost=pizzaCost);
+  });
   return pizzaCost;
-
 }
 
 Order.prototype.place = function(){
   return Order;
 }
 
-var pizza1=new Pizza ("Xlarge","thin","oil","blend",["pepperoni"]);
+var pizza1=new Pizza ("Xlarge","thin","oil","blend",["mushroom"],["pepperoni"]);
 
 var order1=new Order ();
 
