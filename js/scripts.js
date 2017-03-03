@@ -19,6 +19,13 @@ Pizza.prototype.make = function(){
   return Pizza;
 }
 
+Pizza.prototype.howMuch = function(){
+  var pizzaCost=8;
+  var pizzaCost = (this.sizeOf==="large") ? (3+pizzaCost):pizzaCost;
+  var pizzaCost = (this.sizeOf==="Xlarge") ? (6+pizzaCost):pizzaCost;
+  return pizzaCost;
+}
+
 Order.prototype.place = function(){
   return Order;
 }
@@ -26,22 +33,6 @@ Order.prototype.place = function(){
 var pizza1=new Pizza ();
 
 var order1=new Order ();
-
-
-
-
-
-
-Game.prototype.switchPlayers = function() {
-  if (pigGame.activePlayer.who === "player1") {
-    pigGame.activePlayer = player2;
-    console.log("switch to player 2")
-  } else {
-    pigGame.activePlayer = player1;
-    console.log("switch to player 1")
-  }
-}
-
 
 //user logic
 $(function(){
