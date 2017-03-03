@@ -21,8 +21,12 @@ Pizza.prototype.make = function(){
 
 Pizza.prototype.howMuch = function(){
   var pizzaCost=8;
-  var pizzaCost = (this.sizeOf==="large") ? (3+pizzaCost):pizzaCost;
-  var pizzaCost = (this.sizeOf==="Xlarge") ? (6+pizzaCost):pizzaCost;
+  //cost adjustment on Size of pizza
+  var pizzaCost = (this.sizeOf==="large") ? (this.cost=(3+pizzaCost)):(this.cost=pizzaCost);
+  var pizzaCost = (this.sizeOf==="Xlarge") ? (this.cost=(6+pizzaCost)):(this.cost=pizzaCost);
+  //cost adjustment on Crust of pizza
+  var pizzaCost = (this.crust==="thin") ? (this.cost=(1+pizzaCost)):(this.cost=pizzaCost);
+  var pizzaCost = (this.crust==="deepdish") ? (this.cost=(2+pizzaCost)):(this.cost=pizzaCost);
   return pizzaCost;
 }
 
@@ -30,7 +34,7 @@ Order.prototype.place = function(){
   return Order;
 }
 
-var pizza1=new Pizza ();
+var pizza1=new Pizza ("Xlarge","thin");
 
 var order1=new Order ();
 

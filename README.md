@@ -10,8 +10,9 @@
 | order object is created  | create order object | order bject is true |
 | Pizza constructor makes pizza object  | new Pizza | pizza object |
 | Order constructor makes Order object  | new Order | order object |
-| Pizza.howMuch prototype returns basic pizza cost | basic $8 pizza | 8 |
+| Pizza.howMuch prototype returns regular pizza cost | regular  pizza | 8 |
 | Pizza.howMuch prototype returns regular,large,xlarge pizza cost | regular,large,xlarge | 8,11,14 |
+| Pizza.howMuch prototype returns regular,thin, deepdish pizza cost | regular,thin, deepdish | 8,9,10 |
 
 
 
