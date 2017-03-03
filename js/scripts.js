@@ -5,26 +5,22 @@ function Pizza(sizeOf,crust,sauce,cheese,veggieToppings,meatToppings,cost){
   this.crust=crust;
   this.sauce=sauce;
   this.cheese=cheese,
-  this.veggieToppings=veggieToppings;
-  this.meatToppings=meatToppings;
-  this.cost=cost;
+  this.veggieToppings=[];
+  this.meatToppings=[];
+  this.cost=8;
 }
 
 function Order(pizzas,totalCost,deliveryAddress){
   this.pizzas=pizzas;
-  this.totalCost=totalCost;
+  this.totalCost=0;
   this.deliveryAddress=deliveryAddress;
 }
 
-Pizza.prototype.make = function(){
-  return Pizza;
-}
-
 Pizza.prototype.howMuch = function(){
-  var pizzaCost=8;
+  var pizzaCost;
   //cost adjustment on Size of pizza
-   pizzaCost = (this.sizeOf==="large") ? (this.cost=(4+pizzaCost)):(this.cost=pizzaCost);
-   pizzaCost = (this.sizeOf==="Xlarge") ? (this.cost=(7+pizzaCost)):(this.cost=pizzaCost);
+  pizzaCost =(this.sizeOf==="large") ? (this.cost=(4+this.cost)):(this.cost);
+  pizzaCost =(this.sizeOf==="Xlarge") ? (this.cost=(7+this.cost)):(this.cost);
   //cost adjustment on Crust of pizza
    pizzaCost = (this.crust==="thin") ? (this.cost=(1+pizzaCost)):(this.cost=pizzaCost);
    pizzaCost = (this.crust==="deepdish") ? (this.cost=(2+pizzaCost)):(this.cost=pizzaCost);
@@ -42,16 +38,18 @@ Pizza.prototype.howMuch = function(){
   this.meatToppings.forEach(function(topping){
      (/pepperoni|bacon|sausage|salami|capicollo|anchovies/.test(topping)) ? (pizzaCost=(this.cost=(2+pizzaCost))):(this.cost=pizzaCost);
   });
-  return pizzaCost;
 }
-
 Order.prototype.place = function(){
-  return Order;
+  var totalCost=0;
+  this.pizzas.forEach(function(pizza,index){
+    totalCost=pizza.cost+totalCost;
+  });
+  this.totalCost = totalCost;
 }
 
-var pizza1=new Pizza ("Xlarge","thin","oil","blend",["mushroom"],["pepperoni"]);
+var pizza1=new Pizza ();
+var pizza2=new Pizza ();
 
-var order1=new Order ();
 
 //user logic
 $(function(){

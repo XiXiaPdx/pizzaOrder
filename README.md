@@ -17,6 +17,7 @@
 | Pizza.howMuch prototype returns regular, extra, blend  pizza cost | regular,extra, blend | 8,9,10 |
 | Pizza.howMuch prototype returns regular pepperoni  pizza cost | pepperoni | 9|
 | Pizza.howMuch prototype returns regular mushroom  pizza cost | pepperoni | 9|
+| Order.place prototype returns order object with pizza, totalCost, and address  | order 1 pizza, cost 10, 123 John St. | Order object 1 pizza,10,123 John St.|
 
 
 
