@@ -3,11 +3,9 @@ body {
 	font-style: normal;
   height: 100%;
 }
-
 html{
   height: 100%;
 }
-
 #title h1 {
 	color: #f5be56;
 	font: bold 36px/38px Georgia, "Times New Roman", Times, serif;
@@ -16,44 +14,36 @@ html{
 	margin-top: 35px;
 	text-shadow: #5d260d 0 1px 2px;
 }
-
 #Online {
 	color: #e5d4cf;
 	font: bold 18px/20px Georgia, "Times New Roman", Times, serif;
 	text-shadow: #5d260d 0 1px 2px;
 }
-
 #directions{
 	color: black;
 	font: bold 18px/20px Georgia, "Times New Roman", Times, serif;
 }
-
-
-
- #navBackground {
-	width: 874px;
-	margin-right: auto;
-	margin-left: auto;
-  min-height: 200px;
-	background: url(../img/title_bkg.png) no-repeat center top;
+#navBackground {
+  width: 874px;
+  margin-right: auto;
+  margin-left: auto;
+  min-height: 150px;
+  background: url(../img/title_bkg.png) no-repeat center top;
   background-size:100%;
-
 }
-
 #contentTop {
 	background: url(../img/contentTop.png) no-repeat;
 	width: auto;
   margin-right: auto;
 	margin-left: auto;
   min-height: 50px;
-
 }
 #contentMiddle {
 	background: url(../img/contentMiddle.jpg) repeat-y;
   width: auto;
   margin-right: auto;
 	margin-left: auto;
-  min-height: 300px;
+  min-height: 600px;
   padding:10px;
 
 }
@@ -63,38 +53,42 @@ html{
   margin-right: auto;
 	margin-left: auto;
   min-height: 100px;
-
 }
-
 #showPizzas {
   color:white;
+  font-weight: bold;
+  font-size:30px
 }
-
-#pizzaSize {
-float:left;
-width:20%;
-margin:10px;
+.pizzaSizef {
+  float:left;
+  width:20%;
+  margin:10px;
 }
-
 .pizzaSize {
   font-size: 20px;
 }
-
-#pizzaCrust {
-float:left;
-width:20%;
-margin:10px;
-
-}
-
-#pizzaSauce {
+.pizzaCrustf {
   float:left;
   width:20%;
   margin:10px;
 }
-
-#pizzaCheese {
+.pizzaSaucef {
   float:left;
   width:20%;
   margin:10px;
+}
+.pizzaCheesef {
+  float:left;
+  width:20%;
+  margin:10px;
+}
+#pizzaVeggieToppings{
+  float:left;
+  width:20%;
+  margin-left:20%;
+}
+#pizzaMeatToppings {
+  float:left;
+  width:20%;
+  margin-left:5%
 }
