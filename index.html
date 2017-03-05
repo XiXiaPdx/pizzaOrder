@@ -14,8 +14,9 @@
   <body>
     <div class="container">
       <div class="row">
-          <h1>Lets make your custom hand-crafted pizza!</h1>
           <div class="col-md-8">
+            <h1 id="firstPizza">Lets make your custom hand-crafted pizza!</h1>
+            <h1 id="morePizza">Go ahead and make another pizza</h1>
           <button id="startPizza" class="btn btn-default btn-success btn-lg">Start making</button>
           <form id="pizzaForm">
             <div class="form-group" class="pizzaSize">
@@ -28,9 +29,9 @@
             </div>
             <div class="form-group" class="pizzaCrust">
               <select id="pizzaCrust">
-                <option disabled="" selected="">Choose Crust</option>
-                <option value="regular">regular</option>
-                <option value="thin">Thin Crust +$1</option>
+                <option selected="">Choose Crust</option>
+                <option value="regular">Regular </option>
+                <option value="thin">Thin  +$1</option>
                 <option value="deepdish">Deep Dish +$2</option>
               </select>
             </div>
@@ -55,7 +56,12 @@
           </form>
         </div>
         <div class="col-md-4" id="orderCart">
+          <h1> Your Order: </h1>
+          <div id="orderPrice">
+
+          </div>
         </div>
+
 
 
 
