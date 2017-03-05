@@ -7,13 +7,11 @@ function Pizza(sizeOf,crust,veggieToppings,meatToppings,cost){
   this.meatToppings=meatToppings;
   this.cost=8;
 }
-
 function Order(pizzas,totalCost,deliveryAddress){
   this.pizzas=[];
   this.totalCost=totalCost;
   this.deliveryAddress=deliveryAddress;
 }
-
 Pizza.prototype.howMuch = function(){
   //cost adjustment on Size of pizza
   this.cost=8;
@@ -45,29 +43,26 @@ Order.prototype.howMuch = function(){
   });
   return this.totalCost = totalCost;
 }
-
-
-
 //user logic
 $(function(){
   var newPizza = new Pizza();
   var yourOrder=new Order();
-//create pizza object
+  //create pizza object
   $("#startPizza").click(function(){
     $("#pizzaForm").show();
     $("#startPizza").toggle();
   });
-//pizza size, change price
+  //pizza size, change price
   $("#pizzaSize").change(function(){
     newPizza.sizeOf=$("#pizzaSize").val();
     $("#pizzaPrice").empty().append("<h1> Pizza Cost: $"+newPizza.howMuch()+"</h1>");
   });
-//pizza crust
+  //pizza crust
   $("#pizzaCrust").change(function(){
     newPizza.crust=$("#pizzaCrust").val();
     $("#pizzaPrice").empty().append("<h1> Pizza Cost: $"+newPizza.howMuch()+"</h1>");
   });
-//meat toppings, increase and decrease price.
+  //meat toppings, increase and decrease price.
   $("#pizzaMeatToppings input[type=checkbox]").change(function(){
     newPizza.meatToppings=[];
     $("#pizzaMeatToppings input[type=checkbox]:checked").each(function(){
@@ -75,27 +70,40 @@ $(function(){
     });
     $("#pizzaPrice").empty().append("<h1> Pizza Cost: $"+newPizza.howMuch()+"</h1>");
   });
-//veggie toppings, increase and decrease price.
-    $("#pizzaVeggieToppings input[type=checkbox]").change(function(){
-      newPizza.veggieToppings=[];
-      $("#pizzaVeggieToppings input[type=checkbox]:checked").each(function(){
-        newPizza.veggieToppings.push($(this).val());
-      });
-      $("#pizzaPrice").empty().append("<h1> Pizza Cost: $"+newPizza.howMuch()+"</h1>");
+  //veggie toppings, increase and decrease price.
+  $("#pizzaVeggieToppings input[type=checkbox]").change(function(){
+    newPizza.veggieToppings=[];
+    $("#pizzaVeggieToppings input[type=checkbox]:checked").each(function(){
+      newPizza.veggieToppings.push($(this).val());
     });
-//add to order
+    $("#pizzaPrice").empty().append("<h1> Pizza Cost: $"+newPizza.howMuch()+"</h1>");
+  });
+  //add to order
   $("#pizzaForm").submit(function(event){
     event.preventDefault();
-    yourOrder.pizzas.push(newPizza);
-    $("#firstPizza").hide();
-    $("#morePizza").show();
-    $("#pizzaPrice").empty();
-    $("#pizzaForm").trigger("reset");
-    $("#orderCart h1").append("<h3>"+"Pizza #"+(yourOrder.pizzas.length+"</h3>"));
-    $("#orderPrice").empty().prepend("<h2> Order Total: $"+yourOrder.howMuch()+"</h2>");
-    newPizza= new Pizza();
-    console.log(yourOrder);
-
-
+    if ((newPizza.sizeOf === undefined) || (newPizza.crust===undefined)) {
+      alert("Please choose a pizza size and crust before adding to order")
+    } else {
+      yourOrder.pizzas.push(newPizza);
+      $("#firstPizza").hide();
+      $("#morePizza").show();
+      $("#pizzaPrice").empty();
+      $("#confirmOrder").show();
+      $("#orderPrice").empty().append("<h1> Order Total: $"+yourOrder.howMuch()+"</h1>");
+      $("#pizzaForm").trigger("reset");
+      $("#orderCart").append("<ul>"+"Pizza #"+yourOrder.pizzas.length+"</ul>"+
+      "<li>"+newPizza.sizeOf+"</li><li>"+newPizza.crust+"</li>");
+      if(newPizza.meatToppings !== undefined) {
+        newPizza.meatToppings.forEach(function(topping){
+          $("#orderCart").append("<li>"+topping+"</li>");
+        });
+        if(newPizza.veggieToppings !== undefined) {
+          newPizza.veggieToppings.forEach(function(topping){
+            $("#orderCart").append("<li>"+topping+"</li>");
+          });
+        }
+      }
+      newPizza= new Pizza();
+    }
   });
 });
