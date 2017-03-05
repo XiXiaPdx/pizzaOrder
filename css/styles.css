@@ -6,89 +6,77 @@ body {
 html{
   height: 100%;
 }
-#title h1 {
+h1 {
 	color: #f5be56;
 	font: bold 36px/38px Georgia, "Times New Roman", Times, serif;
-  position:absolute;
+  /*position:absolute;*/
 	margin-left: 42px;
 	margin-top: 35px;
 	text-shadow: #5d260d 0 1px 2px;
 }
-#Online {
-	color: #e5d4cf;
-	font: bold 18px/20px Georgia, "Times New Roman", Times, serif;
+
+h3 {
+	color: #f5be56;
+	margin-left: 42px;
+	margin-top: 35px;
 	text-shadow: #5d260d 0 1px 2px;
 }
-#directions{
-	color: black;
-	font: bold 18px/20px Georgia, "Times New Roman", Times, serif;
-}
-#navBackground {
-  width: 874px;
-  margin-right: auto;
-  margin-left: auto;
-  min-height: 150px;
-  background: url(../img/title_bkg.png) no-repeat center top;
-  background-size:100%;
-}
-#contentTop {
-	background: url(../img/contentTop.png) no-repeat;
-	width: auto;
-  margin-right: auto;
-	margin-left: auto;
-  min-height: 50px;
-}
-#contentMiddle {
-	background: url(../img/contentMiddle.jpg) repeat-y;
-  width: auto;
-  margin-right: auto;
-	margin-left: auto;
-  min-height: 600px;
-  padding:10px;
 
-}
-#contentBottom {
-	background: url(../img/contentBottom.png) no-repeat;
-  width: auto;
-  margin-right: auto;
-	margin-left: auto;
-  min-height: 100px;
-}
-#showPizzas {
-  color:white;
+#pizzaForm {
+	display:none;
   font-weight: bold;
-  font-size:30px
+  font-size:25px
 }
-.pizzaSizef {
-  float:left;
-  width:20%;
+
+#pizzaSize {
+	float:left;
+  width:35%;
   margin:10px;
 }
-.pizzaSize {
-  font-size: 20px;
-}
-.pizzaCrustf {
+
+#pizzaCrust {
   float:left;
-  width:20%;
+  width:35%;
   margin:10px;
 }
-.pizzaSaucef {
-  float:left;
-  width:20%;
-  margin:10px;
-}
-.pizzaCheesef {
-  float:left;
-  width:20%;
-  margin:10px;
-}
+
 #pizzaVeggieToppings{
-  float:left;
-  width:20%;
-  margin-left:20%;
+	color: white;
+	font-size: 20px;
+	float:left;
+  width:30%;
+  margin-left:5%;
 }
 #pizzaMeatToppings {
+	color: white;
+	font-size: 20px;
   float:left;
-  width:20%;
+  width:30%;
   margin-left:5%
+}
+
+#meatToppingsDisplay{
+	color:white;
+	float:none;
+	width:23%;
+	margin:10px;
+}
+
+#notToppingsDisplay{
+	color:white;
+	float:left;
+	width:23%;
+	margin:10px;
+}
+
+#pizzaPrice{
+	float:left;
+	width:20%;
+	background-color: white;
+	border-radius: 20px;
+	margin-left: 5%;
+}
+
+#addOrder{
+
 }
